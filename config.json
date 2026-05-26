@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "My Python Buddy",
+    "version": "1.0.0",
+    "description": "AI-Powered Python Learning Assistant",
+    "author": "Your Name"
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 5000,
+    "debug": true,
+    "cors_enabled": true
+  },
+  "ui": {
+    "theme": "dark",
+    "sidebar_width": "260px",
+    "message_max_width": "75%",
+    "animation_enabled": true
+  },
+  "colors": {
+    "bg_primary": "#0d1117",
+    "bg_secondary": "#161b22",
+    "bg_tertiary": "#21262d",
+    "text_primary": "#e6edf3",
+    "text_secondary": "#8b949e",
+    "accent_blue": "#58a6ff",
+    "accent_blue_hover": "#79c0ff",
+    "accent_blue_light": "#1f6feb"
+  },
+  "features": {
+    "conversation_history": true,
+    "local_storage": true,
+    "suggestions": true,
+    "topic_sidebar": true,
+    "mobile_optimized": true
+  },
+  "api": {
+    "base_url": "http://127.0.0.1:5000",
+    "endpoints": {
+      "chat": "/api/chat",
+      "suggestions": "/api/suggestions",
+      "topics": "/api/topics"
+    },
+    "timeout": 30000,
+    "retry_attempts": 3
+  },
+  "security": {
+    "message_max_length": 5000,
+    "validate_input": true,
+    "sanitize_html": true,
+    "rate_limit": false,
+    "rate_limit_requests": 100,
+    "rate_limit_window": 3600
+  },
+  "chatbot": {
+    "name": "My Python Buddy",
+    "greeting": "Welcome to My Python Buddy! 👋",
+    "typing_indicator": true,
+    "show_timestamp": false,
+    "case_sensitive": false,
+    "similarity_threshold": 0.6
+  },
+  "development": {
+    "verbose_logging": true,
+    "mock_responses": false,
+    "test_mode": false
+  }
+}

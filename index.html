@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Python Buddy - AI Learning Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" title="Start a new conversation">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <span>New Chat</span>
+                </button>
+            </div>
+
+            <nav class="topics-nav">
+                <div class="nav-section">
+                    <h3 class="nav-title">Quick Topics</h3>
+                    <ul class="topics-list">
+                        <li><a href="#" class="topic-link" data-question="What is Python?">Python Basics</a></li>
+                        <li><a href="#" class="topic-link" data-question="What are variables?">Variables</a></li>
+                        <li><a href="#" class="topic-link" data-question="What are loops?">Loops</a></li>
+                        <li><a href="#" class="topic-link" data-question="What are functions?">Functions</a></li>
+                        <li><a href="#" class="topic-link" data-question="What is object oriented programming?">OOP</a></li>
+                        <li><a href="#" class="topic-link" data-question="What is try except?">Error Handling</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-title">Topics</h3>
+                    <ul class="topics-list">
+                        <li><a href="#" class="topic-link" data-question="What are data types?">Data Types</a></li>
+                        <li><a href="#" class="topic-link" data-question="What is string?">Strings</a></li>
+                        <li><a href="#" class="topic-link" data-question="What is list?">Lists</a></li>
+                        <li><a href="#" class="topic-link" data-question="What is dictionary?">Dictionaries</a></li>
+                        <li><a href="#" class="topic-link" data-question="How to read file?">File Operations</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn" title="Settings">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6m-16.78 7.78l4.24-4.24m3.08-3.08l4.24-4.24"></path>
+                    </svg>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-content">
+                    <h1>My Python Buddy</h1>
+                    <p class="header-subtitle">Your AI-Powered Python Learning Assistant</p>
+                </div>
+            </header>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-container">
+                <div class="messages-wrapper">
+                    <!-- Welcome Message -->
+                    <div class="message-group welcome-group">
+                        <div class="bot-avatar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <h2>Welcome to My Python Buddy! 👋</h2>
+                                <p>I'm your AI-powered Python learning assistant, ready to help you master Python programming. Ask me anything about Python concepts, syntax, best practices, and more!</p>
+                                <div class="suggestions-box">
+                                    <p class="suggestions-title">Try asking me:</p>
+                                    <div class="suggestions-grid">
+                                        <button class="suggestion-btn" data-question="What is Python?">What is Python?</button>
+                                        <button class="suggestion-btn" data-question="How do variables work?">How do variables work?</button>
+                                        <button class="suggestion-btn" data-question="Explain loops">Explain loops</button>
+                                        <button class="suggestion-btn" data-question="What are functions?">What are functions?</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <form id="chatForm" class="chat-form">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="messageInput" 
+                            class="message-input" 
+                            placeholder="Ask me anything about Python... (Shift+Enter for new line)"
+                            rows="1"
+                        ></textarea>
+                        <button type="submit" class="send-btn" title="Send message (Enter)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16346273 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99701575 L3.03521743,10.4380088 C3.03521743,10.5951061 3.19218622,10.7522035 3.50612381,10.7522035 L16.6915026,11.5376905 C16.6915026,11.5376905 17.1624089,11.5376905 17.1624089,12.0089827 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="input-hint">Press Enter to send • Shift+Enter for new line</p>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loadingIndicator">
+        <div class="typing-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
