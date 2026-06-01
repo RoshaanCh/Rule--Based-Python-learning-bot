@@ -3,8 +3,8 @@
    ====================================== */
 
 // Configuration
-const API_URL = 'https://my-python-buddy.vercel.app/';
-const SUGGESTIONS_URL = 'https://my-python-buddy.vercel.app/';
+const API_URL ='https://my-python-buddy.vercel.app/api/chat'; 
+const SUGGESTIONS_URL ='https://my-python-buddy.vercel.app/api/suggestions';
 
 // DOM Elements
 const chatForm = document.getElementById('chatForm');
